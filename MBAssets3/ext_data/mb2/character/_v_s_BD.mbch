@@ -3,31 +3,46 @@
 ClassInfo
 {
 	name				"_v_s_BD"
-	weapons				WP_BLASTER_PISTOL|WP_BLASTER|WP_THERMAL|WP_TRIP_MINE|WP_MELEE
-	attributes			MB_ATT_FP_MIRALUKA,1|MB_ATT_SOLDIER_TDS,1|MB_ATT_PISTOL,1|MB_ATT_BLASTER,1|MB_ATT_AMMO,3|MB_ATT_ARMOUR,1|MB_ATT_ASSEMBLE,1|MB_ATT_THERMALS,1|MB_ATT_RESPAWNS,2|MB_ATT_GUNBASH|MB_ATT_MICRO_GRENADES|MB_ATT_BLAST_ARMOUR
-	maxhealth			90
+	weapons				WP_FLECHETTE|WP_THERMAL|WP_TRIP_MINE|WP_MELEE
+	attributes			MB_ATT_FP_MIRALUKA,1|MB_ATT_SOLDIER_TDS,1|MB_ATT_A280,3|MB_ATT_ARMOUR,1|MB_ATT_ASSEMBLE,1|MB_ATT_THERMALS,1|MB_ATT_RESPAWNS,2|MB_ATT_GUNBASH|MB_ATT_MICRO_GRENADES|MB_ATT_BLAST_ARMOUR
+	maxhealth			80
 	model			"battledroid" 				//this is optional, if it's here it forces the model to this.
-	skin			"default"					//this is optional, if it's here it forces the skin to this.
-	uishader		"models/players/battledroid/mb2_icon_default"
+	skin			"sniper"					//this is optional, if it's here it forces the skin to this.
+	uishader		"models/players/battledroid/mb2_icon_sniper"
 	MBClass				MB_CLASS_SOLDIER
 	classflags			CFL_STATVIEWER
 	forcepowers			FP_SEE,1
 	forcepool			25
 	forceregen			1
-	classNumberLimit 		8
+	classNumberLimit 		4
 	damageGiven 		0.9
-	
+	rateoffire			0.8
 }
 
 WeaponInfo0
 {
 	WeaponToReplace 	 WP_TRIP_MINE       			
-	WeaponBasedOff 		 WP_TRIP_MINE   
+	WeaponBasedOff 		 WP_THERMAL  
 	NewWorldModel		 "models/weapons2/V-59_Concussion/V-59_conc_w.glm"
 	NewViewModel  		 "models/weapons2/V-59_Concussion/V-59_conc.md3"
+	MissileModel		 "models/weapons2/V-59_Concussion/V-59_conc_proj.md3"
+ 	AltMissileModel		 "models/weapons2/V-59_Concussion/V-59_conc_proj.md3"
 	Icon 				 "gfx/hud/w_icon_V-59_conc"
 	WeaponName 			 "V-59 Concussion Grenade" 
 	CustomAmmo	1
+}
+WeaponInfo1
+{
+	WeaponToReplace		WP_FLECHETTE
+	WeaponBasedOff		WP_FLECHETTE
+	NewWorldModel		"models/weapons2/som3_rifle/som3_rifle_w.glm"
+	NewViewModel		"models/weapons2/som3_rifle/som3_rifle.md3"
+	Icon				"gfx/hud/w_icon_som3_rifle"
+	WeaponName			"E-5s Marksman Rifle"
+	customAmmo			600
+	clipSize            60
+	firingAnim	        BOTH_ATTACK4
+	ReloadTimeModifier 	2
 }
 
 ForceInfo0
@@ -35,18 +50,15 @@ ForceInfo0
 	ForceToReplace	FP_SEE
 	Icon		"gfx/forcepowers/radar"
 	ForcePowerName	"Radar Scanner"
-//	StartSound "sound/mb2/Silence.wav"
-//	LoopSound  "sound/mb2/R2Scanner.wav"
 }
 
-description	"Battle Droid
+description	"B1 Battle Droid Sharpshooter
 
 Class Summary: 
 A specialized reinforcement class meant to be played in numbers with willing allies.
 
 Weaponry:
-- Pistol (1)
-- E-5 Blaster (1)
+- E-5s Marksman Rifle (3)
 - Frag Grenade (1)
 - Concussion Grenade (1)
 

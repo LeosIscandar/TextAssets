@@ -4,15 +4,15 @@ ClassInfo
 {
 	name			"_h_s_pilot"
 	weapons			WP_BLASTER_PISTOL|WP_FLECHETTE|WP_MELEE|WP_ROCKET_LAUNCHER
-	attributes		MB_ATT_PISTOL,2|MB_ATT_A280,1|MB_ATT_ARMOUR,3|MB_ATT_AMMO,2|MB_ATT_PLX1,1|MB_ATT_STAMINA,1|MB_ATT_BLAST_ARMOUR
+	attributes		MB_ATT_PISTOL,2|MB_ATT_ARMOUR,3|MB_ATT_AMMO,2|MB_ATT_PLX1,1|MB_ATT_STAMINA,1|MB_ATT_BLAST_ARMOUR|MB_ATT_A280,3
 	maxhealth		50
-	maxarmor		40
+	maxarmor		50
 	model			"poe"
 	skin			"helmet"
 	uishader		"models/players/poe/mb2_icon_helmet"
-	MBClass			MB_CLASS_CLONETROOPER
+	MBClass			MB_CLASS_ARCTROOPER
 	extralives 2
-	rateoffire	1.25
+		speed	0.95
 }
 
 WeaponInfo0
@@ -23,8 +23,6 @@ WeaponInfo0
 	NewViewModel  "models/weapons2/Glie-44/Glie-44.md3"
 	Icon  "gfx/hud/w_icon_glie-44"
 	WeaponName			"Glie-44"
-  //FlashSound0		"sound/weapons/glie-44/fire.wav"
-  //AltFlashSound0		"sound/weapons/glie-44/alt_fire.wav"
 	MuzzleEffect		"Blaster/MuzzleFlash01B"
 	AltMuzzleEffect		"Blaster/MuzzleFlash03B"
 	MissileEffect		"Blaster/Shot10B"
@@ -37,18 +35,20 @@ WeaponInfo0
 WeaponInfo1
 {
 	WeaponToReplace WP_FLECHETTE
-	WeaponBasedOff  WP_FLECHETTE
+	WeaponBasedOff  WP_BLASTER
 	NewWorldModel "models/weapons2/EL-16/EL-16_w.glm" 
 	NewViewModel  "models/weapons2/EL-16/EL-16.md3"
-	MuzzleEffect  "blaster/altmuzzle_flash"
-	AltMuzzleEffect "blaster/altmuzzle_flash"
-	MissileEffect "Blaster/Shot02R"
-	AltMissileEffect  "Blaster/Shot02R"
-	//FlashSound0 "sound/weapons/EL-16/fire.wav"
-	//AltFlashSound0  "sound/weapons/EL-16/alt_fire.wav"
+	MuzzleEffect  "Blaster/MuzzleFlash01B"
+	AltMuzzleEffect "Blaster/MuzzleFlash01B"
+	MissileEffect "Blaster/Shot02B"
+	AltMissileEffect  "Blaster/Shot02B"
+	FlashSound0 "sound/weapons/EL-16/fire.wav"
+	AltFlashSound0  "sound/weapons/EL-16/alt_fire.wav"
 	Icon  "gfx/hud/w_icon_el-16"
 	WeaponName  "EL-16"
+	firingAnim	BOTH_ATTACK4
 }
+
 
 WeaponInfo2
 {
@@ -65,7 +65,7 @@ description	"Resistance Pilot
 
 Weaponry:
 - Glie-44 (2)
-- EL-16 (1)
+- EL-16 (3)
 - MiniMag PTL Rocket Launcher (1)
 
 Attributes:

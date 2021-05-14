@@ -1,0 +1,74 @@
+//Siege class def file.
+
+ClassInfo
+{
+name			"_v_c_praetorianguard"
+weapons		WP_SABER|WP_MELEE|WP_BLASTER
+saber1			electro-bisento_legends
+saberstyle		SS_MEDIUM|SS_STRONG|SS_STAFF
+attributes		MB_ATT_ARMOUR,3|MB_ATT_FORCEBLOCK,3|MB_ATT_BLASTER,2|MB_ATT_MAGNETIC_PLATING,1|MB_ATT_DODGE,3
+forcepowers		FP_SABER_OFFENSE,1|FP_SABER_DEFENSE,2|FP_LEVITATION,1|FP_SPEED,3
+forcepool		40
+forceregen      2
+classflags		CFL_BLOODYMELEE|CFL_SHOTGUN
+maxhealth		100
+maxarmor		60
+model			"praetorian_guard"
+skin			"default"
+uishader		"models/players/praetorian_guard/mb2_icon_default"
+MBClass			MB_CLASS_JEDI
+classNumberLimit	1
+ASmultiplier        1.2
+CSmultiplier 		1.5
+speed			1.04
+WP_BlasterFlags     HELD_PULSE
+}
+
+WeaponInfo0
+{
+WeaponToReplace		WP_SABER
+WeaponBasedOff		WP_SABER
+NewWorldModel		"models/weapons2/praetorian_guards/electro-bisento.glm"
+NewViewModel		"models/weapons2/dummy/dummy.md3"
+Icon			"gfx/hud/w_icon_p_bisento"
+WeaponName		"Electro Bisento"
+}
+WeaponInfo1
+{
+	WeaponToReplace		WP_BLASTER				//Required: Weapon Slot of weapon you're replacing
+	WeaponBasedOff		WP_BLASTER					//Required: For future use, should be the same as WeaponToReplace
+	NewWorldModel	"models/weapons2/arc_caster/arc_caster_w.glm"  	
+	NewViewModel	"models/weapons2/blaster_r/blaster.md3"     	//Required: New 1st person weapon model
+	Icon			"gfx/hud/w_icon_E11" 					//Required: Weapon change icon
+	WeaponName		"Arc Caster"    				//Required: Weapon change display name
+	firingAnim	        BOTH_ATTACK4
+	MuzzleEffect		"arc_caster/ArcCasterMuzzle"
+	AltMuzzleEffect		"arc_caster/ArcCasterMuzzle"
+	MissileEffect		"arc_caster/ArcCasterShock"
+	altMissileEffect		"arc_caster/ArcCasterShock"
+    MissileMissEffect "effects/blaster/Impact_Wall01B"
+    altMissileMissEffect  "effects/blaster/Impact_Wall01B"
+	FlashSound0		"sound/ambience/thunder1.mp3"
+	altFlashSound0 "sound/ambience/thunder1.mp3"
+	altfireenabled		0
+	clipsize   36
+	customammo 288
+}
+
+description	"Praetorian Guard
+
+Weaponry:
+- Electro Bisento (Medium Style)
+- Arc Caster (Stun Shotgun)
+
+Attributes:
+- Magnetic Plating
+- Defense (2)
+- Forceblock (3)
+ - Speed (3)
+- Dodge (3)
+- Jump (1)
+
+
+Description
+The Elite Praetorian Guard served as bodyguards of Supreme Leader Snoke, ruler of the First Order."
