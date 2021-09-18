@@ -1,3 +1,17 @@
+head,*off
+teeth,*off
+eyes,*off
+eyelids,*off
+tongue,*off
+
+head_h2,*off
+head_eyes_h2,*off
+mouth_h2,*off
+tongue_h2,*off
+teeth_h2,*off
+
+neck_wrap,*off
+
 heada,models/players/sith_assassin/head.tga
 
 torsoa,*off
